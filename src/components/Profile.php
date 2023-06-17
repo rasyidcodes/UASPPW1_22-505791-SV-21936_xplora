@@ -1,6 +1,22 @@
 <?php
 // PHP code
 
+session_start();
+
+            $user_id = '';
+            // Access the user_id value from the session
+            if (isset($_SESSION['user_id'])) {
+                $user_id = $_SESSION['user_id'];
+                
+                // Use the $user_id as needed
+                // ...
+            } else {
+                // Redirect to the signup route
+                header('Location: /xplora/signup');
+                exit(); // Terminate the current script to prevent further execution
+            }
+
+
 // Database connection parameters
 $servername = "localhost";
 $username = "root";
@@ -16,8 +32,8 @@ if ($conn->connect_error) {
 }
 
 // Fetch user data based on user_id
-$user_id = 1; // Change this to the desired user_id
-$sql = "SELECT * FROM users WHERE user_id = 1";
+// Change this to the desired user_id
+$sql = "SELECT * FROM users WHERE user_id = '$user_id'";
 $result = $conn->query($sql);
 
 // Check if any data is found

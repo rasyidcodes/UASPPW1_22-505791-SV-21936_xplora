@@ -1,4 +1,20 @@
 <?php
+
+            session_start();
+
+            $user_id = '';
+            // Access the user_id value from the session
+            if (isset($_SESSION['user_id'])) {
+                $user_id = $_SESSION['user_id'];
+                
+                // Use the $user_id as needed
+                // ...
+            } else {
+                // Redirect to the signup route
+                header('Location: /xplora/signup');
+                exit(); // Terminate the current script to prevent further execution
+            }
+
             // Koneksi ke database
             $host = 'localhost';
             $user = 'root';
