@@ -34,7 +34,6 @@
             // Clear form fields
             alert("sukses menambahkan");
            
-
             // Reload the list
             loadList();
           }
@@ -57,7 +56,7 @@
     });
   </script>
 
-  
+
     </head>
 
     <body>
@@ -76,7 +75,7 @@
                     </div>
                     <div class="border border-gray-300 mt-3 mb-3"></div>
                     <div class="flex justify-end">
-                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">Post</button>
+                        <button type="submit" class="bg-indigo-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">Post</button>
                     </div>
                 </form>
             </div>  
