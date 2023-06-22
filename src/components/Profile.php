@@ -246,7 +246,7 @@ if ($result->num_rows > 0) {
     </div>
 </div>
 <div id="statusModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 items-center justify-center">
-  <div class="modal-content bg-white w-1/2 p-6 rounded-lg">
+  <div class="modal-content bg-white w-3/4 md:w-1/2 p-6 rounded-lg">
     <span class="close absolute top-2 right-2 text-gray-600 cursor-pointer">&times;</span>
     <h2>Update Status</h2>
     

@@ -12,7 +12,7 @@ session_start();
                 // ...
             } else {
                 // Redirect to the signup route
-                header('Location: /xplora/signup');
+                header('Location: /xplora/home');
                 exit(); // Terminate the current script to prevent further execution
             }
 
