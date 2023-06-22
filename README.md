@@ -338,8 +338,84 @@ gdata.php
 ```
 Data akan ditampilkan pada id="postList" supaya tidak melakukan reload makan menggunakan ajax.
 
+- Update
+```
+<?php
+// Retrieve the data sent from JavaScript
+$status = $_POST['param1'];
+$postID = $_POST['param2'];
 
 
+require 'connection.php';
 
+            
+// Check for connection errors
+if ($conn->connect_error) {
+    die('Connection failed: ' . $conn->connect_error);
+}
+
+// Prepare the update query
+$sql = "UPDATE posts SET status = '$status'  WHERE postID = '$postID'"; // Replace with your actual table and column names
+
+// Execute the update query
+if ($conn->query($sql) === TRUE) {
+    echo 'Data updated successfully';
+} else {
+    echo 'Error updating data: ' . $conn->error;
+}
+
+// Close the database connection
+$conn->close();
+?>
+
+```
+Update digunakan untuk mengupdate postingan atau status yang telah dibuat oleh user pada menu profile menggunakan query delete dan juga ajax untuk auto reload postingan yang ada.
+
+- Delete
+
+```
+<?php
+// Retrieve the data sent from JavaScript
+$postID = $_POST['param1'];
+
+// Perform the update operation with the received data
+// Replace this code with your actual update logic
+
+require 'connection.php';
+
+// Check for connection errors
+if ($conn->connect_error) {
+    die('Connection failed: ' . $conn->connect_error);
+}
+
+// Prepare the update query
+$sql = "DELETE FROM posts WHERE postID = '$postID'"; // Replace with your actual table and column names
+
+// Execute the update query
+if ($conn->query($sql) === TRUE) {
+    echo 'Data deleted successfully';
+} else {
+    echo 'Error deleting data: ' . $conn->error;
+}
+
+// Close the database connection
+$conn->close();
+?>
+
+
+```
+Untuk menghapus postingan sesuai postID.
+
+
+# Route available
+index.php
+```
+$route->add("/signin","src/pages/Signin.php");
+$route->add("/signup","src/pages/Signup.php");
+$route->add("/","src/pages/index.php");
+$route->add("/home","src/pages/home.php");
+$route->notFound("src/pages/404.php");
+
+```
 
 
