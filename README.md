@@ -25,4 +25,15 @@ Xplora mencoba mengatasi beberapa permasalahan yang sering dihadapi oleh para pe
 
 - Profile : Fitur profil memungkinkan pengguna untuk melihat informasi akun mereka, seperti foto profil, bio, dan minat pribadi. Pengguna juga dapat mengedit dan memperbarui postingan mereka, sehingga tetap terhubung dengan komunitas yang lebih luas.
 
+# Libarary dan cara RUN
+
+### Library :
+- tailwind untuk styling css
+- JQUERY untuk memanipulasi elemen HTML (AJAX)
+
+### RUN :
+- Import terlebih dahulu file sql yaitu xplora.sql
+- Kemudian setup directory XAMPP menggunakan nama 'XPLORA' -> jadi http://localhost/xplora/
+- RUN
+
 
