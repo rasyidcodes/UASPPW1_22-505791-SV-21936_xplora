@@ -182,7 +182,7 @@ Ini merupakan feedback menggunakan sweetalert apakah user yakin untuk menghapus 
 ## Konten dinamis
 Pada konten dinamis web ini menggunakan mysql, dengan backend php, dan juga Jquery(ajax) untuk memanupulasi html.
 
-#### - Create
+- #### Create
 
 ##### register user
 ./api/user.php
