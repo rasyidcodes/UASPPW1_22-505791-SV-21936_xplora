@@ -182,9 +182,11 @@ Ini merupakan feedback menggunakan sweetalert apakah user yakin untuk menghapus 
 ## Konten dinamis
 Pada konten dinamis web ini menggunakan mysql, dengan backend php, dan juga Jquery(ajax) untuk memanupulasi html.
 
-### Create
-```
+#### Create
 
+##### register user
+./api/user.php
+```
 <?php
 
 class User extends DBConfig {
@@ -211,7 +213,56 @@ class User extends DBConfig {
 ?>
 
 ```
-Menggunakan konsep OOP yaitu class user yang mempunyai method register
+Menggunakan konsep OOP yaitu class user yang mempunyai method register menggunakan QUERY INSERT untuk memasukan data ke sql. Kemudian menjalankan session bawaan php menggunan session_start()
+
+```
+#### memposting data ke home
+./api/adata.php
+<?php
+
+
+session_start();
+
+            $user_id = '';
+            // Access the user_id value from the session
+            if (isset($_SESSION['user_id'])) {
+                $user_id = $_SESSION['user_id'];
+                
+                // Use the $user_id as needed
+                // ...
+            } else {
+                // Redirect to the signup route
+                header('Location: /xplora/home');
+                exit(); // Terminate the current script to prevent further execution
+            }
+
+
+// Establish database connection (replace with your own details)
+require 'connection.php';
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+// Retrieve form data
+$postContent = $_POST['postContent'];
+
+
+
+// Prepare and execute SQL statement to insert data
+$sql = "INSERT INTO posts (status, postBy) VALUES ('$postContent', '$user_id')";
+
+if ($conn->query($sql) === TRUE) {
+  echo "Data inserted successfully!";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
+```
+Pertama adalah mengecek session apakah user sudah login atau belum. jika belum maka akan diarahakan untuk login terlebih dahulu. Pada bagian ini menunjukan untuk insert data menggunakan query insert untuk memasukkan data ke tabel posts.
 
 
 
