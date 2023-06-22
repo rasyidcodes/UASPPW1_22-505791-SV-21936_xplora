@@ -1,93 +1,109 @@
+<?php
+// MySQL database credentials
+$host = 'localhost';
+$db = 'xplora';
+$user = 'root';
+$password = '';
+
+// Establish a MySQL connection
+$mysqli = new mysqli($host, $user, $password, $db);
+
+// Check for connection errors
+if ($mysqli->connect_errno) {
+    echo 'Failed to connect to MySQL: ' . $mysqli->connect_error;
+    exit();
+}
+
+// Query to retrieve the notification data
+$query = "SELECT n.notificationFrom, n.notificationFor, n.type, n.time,
+          u.username AS notificationFromUsername
+          FROM notification n
+          INNER JOIN users u ON n.notificationFrom = u.user_id";
+
+// Execute the query
+$result = $mysqli->query($query);
+
+// Check for query execution error
+if (!$result) {
+    echo 'Error executing the query: ' . $mysqli->error;
+    exit();
+}
+
+// Fetch the notification data as an associative array
+$notifications = [];
+while ($row = $result->fetch_assoc()) {
+    $notifications[] = $row;
+}
+
+// Close the database connection
+$mysqli->close();
+?>
+
+<!-- HTML markup and dynamic PHP code for the notification list -->
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
- 
-  <title>Notification List UI</title>
-</head>
+<!-- ...Rest of the HTML code... -->
 
-<body class="bg-gray-100">
-  <div class="container mx-auto px-4">
-  <a class="flex items-center w-full h-14" href="#">
+<body >
+    <!-- ...Rest of the HTML code... -->
+    <a class="flex items-center w-full h-14" href="#">
         <span class="ml-2 text-lg font-bold">Notification</span>
     </a>
-    <div class="bg-white shadow overflow-hidden sm:rounded-lg">
-      <ul class="divide-y divide-gray-200">
-        <li>
-          <a href="#" class="block hover:bg-gray-50">
-            <div class="flex items-center px-4 py-4 sm:px-6">
-              <div class="flex-shrink-0">
-              <i class="fas fa-user-plus w-6 h-6 text-gray-400"></i>
-              </div>
-              <div class="ml-4">
-                <div class="text-sm font-medium text-gray-900">
-                  John Doe started following you
-                </div>
-                <div class="text-sm text-gray-500">
-                  10 minutes ago
-                </div>
-                <div class="text-sm text-gray-500">
-                  No additional information
-                </div>
-                <div class="text-sm text-gray-500">
-                  No agenda
-                </div>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="block hover:bg-gray-50">
-            <div class="flex items-center px-4 py-4 sm:px-6">
-              <div class="flex-shrink-0">
-              <i class="fas fa-retweet w-6 h-6 text-gray-400"></i>
-              </div>
-              <div class="ml-4">
-                <div class="text-sm font-medium text-gray-900">
-                  Jane Smith reposted your post
-                </div>
-                <div class="text-sm text-gray-500">
-                  1 hour ago
-                </div>
-                <div class="text-sm text-gray-500">
-                  Check out the reposted content
-                </div>
-                <div class="text-sm text-gray-500">
-                  No agenda
-                </div>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="block hover:bg-gray-50">
-            <div class="flex items-center px-4 py-4 sm:px-6">
-              <div class="flex-shrink-0">
-              <i class="fas fa-plus w-6 h-6 text-gray-400"></i>
-              </div>
-              <div class="ml-4">
-                <div class="text-sm font-medium text-gray-900">
-                  New trip suggestion: Beach getaway
-                </div>
-                <div class="text-sm text-gray-500">
-                  2 days ago
-                </div>
-                <div class="text-sm text-gray-500">
-                  Check out the trip details
-                </div>
-                <div class="text-sm text-gray-500">
-                  June 20 - June 25, 2023
-                </div>
-              </div>
-            </div>
-          </a>
-        </li>
-      </ul>
+
+    <div class="bg-white  overflow-hidden sm:rounded-lg px-4">
+        <ul class="divide-y divide-gray-200">
+            <?php foreach ($notifications as $notification) {
+                $iconClass = '';
+                $caption = '';
+
+                // Generate icon and caption based on notification type
+                switch ($notification['type']) {
+                    case 'follow':
+                        $iconClass = 'fas fa-user-plus';
+                        $caption = $notification['notificationFromUsername'] . ' started following you';
+                        break;
+                    case 'repost':
+                        $iconClass = 'fas fa-retweet';
+                        $caption = $notification['notificationFromUsername'] . ' reposted your post';
+                        break;
+                    case 'like':
+                        $iconClass = 'fas fa-heart';
+                        $caption = $notification['notificationFromUsername'] . ' liked your post';
+                        break;
+                    case 'mention':
+                        $iconClass = 'fas fa-at';
+                        $caption = 'You were mentioned by ' . $notification['notificationFromUsername'];
+                        break;
+                }
+            ?>
+                <li>
+                    <a href="#" class="block hover:bg-gray-50">
+                        <div class="flex items-center px-4 py-4 sm:px-6">
+                            <div class="flex-shrink-0">
+                                <i class="<?php echo $iconClass; ?> w-6 h-6 text-gray-400"></i>
+                            </div>
+                            <div class="ml-4">
+                                <div class="text-sm font-medium text-gray-900">
+                                    <?php echo $caption; ?>
+                                </div>
+                                <div class="text-sm text-gray-500">
+                                    <?php echo $notification['time']; ?> <!-- Assuming 'time' field contains the timestamp -->
+                                </div>
+                                <div class="text-sm text-gray-500">
+                                    
+                                </div>
+                                <div class="text-sm text-gray-500">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            <?php } ?>
+        </ul>
     </div>
-  </div>
+    <!-- ...Rest of the HTML code... -->
 </body>
 
 </html>

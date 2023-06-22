@@ -18,13 +18,15 @@ session_start();
 
 
 // Database connection parameters
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "xplora";
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $dbname = "xplora";
 
-// Create a new MySQLi object
-$conn = new mysqli($servername, $username, $password, $dbname);
+// // Create a new MySQLi object
+// $conn = new mysqli($servername, $username, $password, $dbname);
+
+require '../../api/connection.php';
 
 // Check the connection
 if ($conn->connect_error) {
@@ -53,21 +55,6 @@ if ($result->num_rows > 0) {
     $postSql = "SELECT * FROM posts WHERE postBy = $user_id";
     $postResult = $conn->query($postSql);
 
-    // Check if any posts are found
-    // if ($postResult->num_rows > 0) {
-    //     // Fetch posts data
-    //     while ($postRow = $postResult->fetch_assoc()) {
-    //         $postTitle = $postRow['title'];
-    //         $postContent = $postRow['content'];
-
-    //         // Store post data in the posts array
-    //         $posts[] = array(
-    //             'title' => $postTitle,
-    //             'content' => $postContent
-    //         );
-    //     }
-    // }
-    
 } else {
     echo "No user found with user_id $user_id";
 }

@@ -18,13 +18,7 @@ session_start();
 
 
 // Establish database connection (replace with your own details)
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "xplora";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+require 'connection.php';
 
 // Check connection
 if ($conn->connect_error) {

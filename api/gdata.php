@@ -13,15 +13,9 @@
             }
 
             // Koneksi ke database
-            $host = 'localhost';
-            $user = 'root';
-            $password = '';
-            $database = 'xplora';
+            require 'connection.php';
 
-            $connection = mysqli_connect($host, $user, $password, $database);
-            if (!$connection) {
-                die("Koneksi database gagal: " . mysqli_connect_error());
-            }
+            $connection = $conn;
 
             // Query untuk mendapatkan data post dengan join ke tabel users
             $query = "SELECT posts.*, users.screenName, users.username FROM posts

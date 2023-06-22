@@ -7,14 +7,17 @@ $postID = $_POST['param2'];
 // Replace this code with your actual update logic
 
 // Example: Updating a database record
-$dbHost = 'localhost';
-$dbUser = 'root';
-$dbPass = '';
-$dbName = 'xplora';
+// $dbHost = 'localhost';
+// $dbUser = 'root';
+// $dbPass = '';
+// $dbName = 'xplora';
 
-// Create a new database connection
-$conn = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
+// // Create a new database connection
+// $conn = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
 
+require 'connection.php';
+
+            
 // Check for connection errors
 if ($conn->connect_error) {
     die('Connection failed: ' . $conn->connect_error);

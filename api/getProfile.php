@@ -16,15 +16,19 @@
             }
 
             // Koneksi ke database
-            $host = 'localhost';
-            $user = 'root';
-            $password = '';
-            $database = 'xplora';
+            // $host = 'localhost';
+            // $user = 'root';
+            // $password = '';
+            // $database = 'xplora';
 
-            $connection = mysqli_connect($host, $user, $password, $database);
-            if (!$connection) {
-                die("Koneksi database gagal: " . mysqli_connect_error());
-            }
+            // $connection = mysqli_connect($host, $user, $password, $database);
+            // if (!$connection) {
+            //     die("Koneksi database gagal: " . mysqli_connect_error());
+            // }
+
+            require 'connection.php';
+
+            $connection = $conn;
 
             $sqlPosts = "SELECT posts.*, users.screenName, users.username FROM posts
             INNER JOIN users ON posts.postBy = users.user_id WHERE postBy = '$user_id' ORDER BY postID DESC ";
@@ -36,8 +40,8 @@
                   echo '<div class="flex items-center space-x-4">';
                   echo '<img src="./public/user.png" alt="Profile Picture" class="w-12 h-12 rounded-full">';
                   echo '<div>';
-                  echo '<p>' . $row['screenName'] . '</p>';
-                  echo '<p>' . $row['username'] . '</p>';
+                  echo '<p class="font-bold">' . $row['screenName'] . '</p>';
+                  echo '<p> @' . $row['username'] . '</p>';
                   echo '</div>';
                   echo '</div>';
                   echo '<div class="relative">';

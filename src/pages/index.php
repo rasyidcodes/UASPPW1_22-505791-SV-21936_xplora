@@ -137,10 +137,10 @@ $(document).ready(function() {
         });
     });
 
-	$(document).on('click', '#navBottomMessage', function(event) {
+	$(document).on('click', '#navBottomEvent', function(event) {
         event.preventDefault(); // Prevent default link behavior
         $.ajax({
-            url: './src/components/Message.php',
+            url: './src/components/Event.php',
             type: 'POST',
             success: function(response) {
                 $('#mainPage').html(response); // Update the authContainer with the returned HTML
@@ -178,7 +178,7 @@ $(document).ready(function() {
             url: './api/Logout.php',
             type: 'POST',
             success: function(response) {
-				window.location.href = '/xplora/signup';
+				window.location.href = '/xplora/home';
 			}
         });
     });
@@ -281,8 +281,8 @@ $(document).ready(function() {
 	<a class="nav-item mx-4 text-white" href="#" data-target="home" id="navBottomHome">
         <i class="fas fa-home"></i>
       </a>
-      <a class="nav-item mx-4 text-white" href="#" data-target="message" id="navBottomMessage">
-        <i class="fas fa-envelope"></i>
+      <a class="nav-item mx-4 text-white" href="#" data-target="message" id="navBottomEvent">
+        <i class="fas fa-calendar-alt"></i>
       </a>
       <a class="nav-item mx-4 text-white" href="#" data-target="contact" id="navBottomNotification">
         <i class="fas fa-bell"></i>
@@ -368,7 +368,7 @@ $(document).ready(function() {
 						
 						<div class="w-full">
 							<div class="w-full justify-between flex">
-								<p class="font-bold">Raja Ampat</p>
+								<p class="font-bold">#RajaAmpat</p>
 							
 							</div>
 							<p class="text-gray-800">1200 posts</p>
@@ -377,7 +377,7 @@ $(document).ready(function() {
 					<div class="flex items-center space-x-4 pl-8 pr-6 w-full">
 						<div class="w-full">
 							<div class="w-full justify-between flex">
-								<p class="font-bold">Labuan Bajo</p>
+								<p class="font-bold">#LabuanBajo</p>
 							</div>
 							<p class="text-gray-800">1000 posts</p>
 						</div>
@@ -386,7 +386,7 @@ $(document).ready(function() {
 					<div class="flex items-center space-x-4 pl-8 pr-6 w-full">
 						<div class="w-full">
 							<div class="w-full justify-between flex">
-								<p class="font-bold">Bali</p>
+								<p class="font-bold">#Bali</p>
 								
 							</div>
 							<p class="text-gray-800">800 posts</p>
@@ -396,7 +396,7 @@ $(document).ready(function() {
 					<div class="flex items-center space-x-4 pl-8 pr-6 w-full">
 						<div class="w-full">
 							<div class="w-full justify-between flex">
-								<p class="font-bold">Banda Neira</p>
+								<p class="font-bold">#BandaNeira</p>
 								
 							</div>
 							<p class="text-gray-800">500 posts</p>
