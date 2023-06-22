@@ -29,36 +29,18 @@
 
     <div class="w-full h-full overflow-y-scroll" style="background-color: #EFEEF1; border-radius: 10px;">
         <div class="p-4 m-8 bg-white" style="border-radius:10px;">
-                    <li class=" border-b border-gray-200 py-4">
-                        <div class="flex items-center space-x-4">
+                    
+
+                    <li class="border-b border-gray-200 py-4 ">
+                        <div class="flex items-center space-x-4 ">
                             <div class="flex-shrink-0">
                                 <img class="h-10 w-10 rounded-full"
-                                    src="https://via.placeholder.com/50"
+                                    src="./public/user.png"
                                     alt="Profile Picture">
                             </div>
                             <div class="flex-grow">
                                 <h4 class="text-lg font-bold">Jane Smith</h4>
-                                <p class="text-gray-600 ">Sed tempus lacus sed neque cursus, vitae dictum mi
-                                    hendrerit. Vivamus varius nisl ac tellus euismod, a aliquam lectus
-                                    auctor.</p>
-                            </div>
-                        </div>
-
-                        
-                    </li>
-
-                    <li class=" border-b border-gray-200 py-4">
-                        <div class="flex items-center space-x-4">
-                            <div class="flex-shrink-0">
-                                <img class="h-10 w-10 rounded-full"
-                                    src="https://via.placeholder.com/50"
-                                    alt="Profile Picture">
-                            </div>
-                            <div class="flex-grow">
-                                <h4 class="text-lg font-bold">Jane Smith</h4>
-                                <p class="text-gray-600">Sed tempus lacus sed neque cursus, vitae dictum mi
-                                    hendrerit. Vivamus varius nisl ac tellus euismod, a aliquam lectus
-                                    auctor.</p>
+                                <p class="text-gray-600">Ayo kita liburan ke Bali.</p>
                             </div>
                         </div>
 
@@ -69,14 +51,12 @@
                         <div class="flex items-center space-x-4 ">
                             <div class="flex-shrink-0">
                                 <img class="h-10 w-10 rounded-full"
-                                    src="https://via.placeholder.com/50"
+                                    src="./public/user.png"
                                     alt="Profile Picture">
                             </div>
                             <div class="flex-grow">
-                                <h4 class="text-lg font-bold">Jane Smith</h4>
-                                <p class="text-gray-600">Sed tempus lacus sed neque cursus, vitae dictum mi
-                                    hendrerit. Vivamus varius nisl ac tellus euismod, a aliquam lectus
-                                    auctor.</p>
+                                <h4 class="text-lg font-bold">Steven Gerrard</h4>
+                                <p class="text-gray-600">Kapan kamu luang?</p>
                             </div>
                         </div>
 
@@ -87,54 +67,14 @@
                         <div class="flex items-center space-x-4 ">
                             <div class="flex-shrink-0">
                                 <img class="h-10 w-10 rounded-full"
-                                    src="https://via.placeholder.com/50"
+                                    src="./public/user.png"
                                     alt="Profile Picture">
                             </div>
                             <div class="flex-grow">
-                                <h4 class="text-lg font-bold">Jane Smith</h4>
-                                <p class="text-gray-600">Sed tempus lacus sed neque cursus, vitae dictum mi
-                                    hendrerit. Vivamus varius nisl ac tellus euismod, a aliquam lectus
-                                    auctor.</p>
+                                <h4 class="text-lg font-bold">Mo Salah</h4>
+                                <p class="text-gray-600">Ayo berkunjung ke Mesir</p>
                             </div>
-                        </div>
-
-                        
-                    </li>
-
-                    <li class="border-b border-gray-200 py-4 ">
-                        <div class="flex items-center space-x-4 ">
-                            <div class="flex-shrink-0">
-                                <img class="h-10 w-10 rounded-full"
-                                    src="https://via.placeholder.com/50"
-                                    alt="Profile Picture">
-                            </div>
-                            <div class="flex-grow">
-                                <h4 class="text-lg font-bold">Jane Smith</h4>
-                                <p class="text-gray-600">Sed tempus lacus sed neque cursus, vitae dictum mi
-                                    hendrerit. Vivamus varius nisl ac tellus euismod, a aliquam lectus
-                                    auctor.</p>
-                            </div>
-                        </div>
-
-                        
-                    </li>
-
-                    <li class="border-b border-gray-200 py-4 ">
-                        <div class="flex items-center space-x-4 ">
-                            <div class="flex-shrink-0">
-                                <img class="h-10 w-10 rounded-full"
-                                    src="https://via.placeholder.com/50"
-                                    alt="Profile Picture">
-                            </div>
-                            <div class="flex-grow">
-                                <h4 class="text-lg font-bold">Jane Smith</h4>
-                                <p class="text-gray-600">Sed tempus lacus sed neque cursus, vitae dictum mi
-                                    hendrerit. Vivamus varius nisl ac tellus euismod, a aliquam lectus
-                                    auctor.</p>
-                            </div>
-                        </div>
-
-                        
+                        </div>    
                     </li>
         </div>
 

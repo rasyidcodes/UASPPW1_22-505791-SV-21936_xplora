@@ -70,7 +70,7 @@
             <div>
                 <form id="postForm"> <!-- Tambahkan id ke form -->
                     <div class="flex items-center space-x-4">
-                        <img src="./public/avatar.jpg" alt="Profile Picture" class="w-12 h-12 rounded-full">
+                        <img src="./public/user.png" alt="Profile Picture" class="w-12 h-12 rounded-full">
                         <input type="text" id="postContent" name="postContent" placeholder="What do you want to share today?" class="w-full px-2 py-1 bg-slate-100 rounded custom-input">
                     </div>
                     <div class="border border-gray-300 mt-3 mb-3"></div>

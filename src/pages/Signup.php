@@ -50,7 +50,7 @@
                             icon: "success",
                             confirmButtonText: "OK"
                             }).then(function() {
-                                window.location.href = "/xplora/i";
+                                window.location.href = "/xplora/";
                               });;
                         </script>';
                 } else {

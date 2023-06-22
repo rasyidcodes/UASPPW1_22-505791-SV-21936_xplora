@@ -9,7 +9,7 @@
 		// ...
 	} else {
 		// Redirect to the signup route
-		header('Location: /xplora/signup');
+		header('Location: /xplora/home');
 		exit(); // Terminate the current script to prevent further execution
 	}
 	
@@ -31,7 +31,7 @@
 	<link href="{{ mix('src/css/app.css') }}" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-  <title>Example HTML Columnss</title>
+  <title>Xplora</title>
 </head>
 
 <style>
@@ -193,12 +193,12 @@ $(document).ready(function() {
       <!-- Column 1 Content -->
       
       <div class="flex flex-col items-center w-full h-screen overflow-hidden text-gray-700 rounded ">
-		<a class="flex items-center w-full px-3 mt-3" href="#">
-			<svg class="w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+		<a class="flex items-center w-full px-3 mt-4" href="#">
+			<!-- <svg class="w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
 				<path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
-			</svg>
+			</svg> -->
 			
-			<span class="ml-2 text-sm font-bold">Xplora</span>
+			<span class="ml-2 text-sm font-bold py-1">Xplora</span>
 		</a>
 		<div class="w-full px-2">
 			<div class="flex flex-col items-center w-full mt-3 border-t border-gray-300" >
@@ -218,33 +218,33 @@ $(document).ready(function() {
 					<span class="ml-2 text-sm font-medium">Notification</span>
 				</a>
 
-				<a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300" href="#" id="search">
+				<!-- <a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300" href="#" id="search">
 					<i class="fas fa-search w-8 h-8 flex items-center justify-center"></i>
 					<span class="ml-2 text-sm font-medium">Search</span>
-				</a>
+				</a> -->
 				<a class="flex items-center w-full h-12 px-3 mt-2 hover:bg-gray-300 rounded" href="#" id="event" >
 					<i class="fas fa-calendar-alt w-8 h-8 flex items-center justify-center"></i>
 					<span class="ml-2 text-sm font-medium">Event</span>
 				</a>
 				
 
-				<a id="profile" class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300"  href="#" id="profile">
-					<i class="fas fa-user w-8 h-8 flex items-center justify-center"></i>
-					<span class="ml-2 text-sm font-medium">Profiles</span>
-				</a>
+				
 
 				
 			</div>
 			<div class="flex flex-col items-center w-full mt-2 border-t border-gray-300">
 				
-				<a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300" href="#">
+				<!-- <a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300" href="#">
 					<i class="fas fa-cog w-8 h-8 flex items-center justify-center"></i>
 					<span class="ml-2 text-sm font-medium">Settings</span>
+				</a> -->
+				<a id="profile" class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300"  href="#" id="profile">
+					<i class="fas fa-user w-8 h-8 flex items-center justify-center"></i>
+					<span class="ml-2 text-sm font-medium">Profile</span>
 				</a>
-				
 			</div>
 		</div>
-		<a class="flex items-center justify-center w-full h-16 mt-auto bg-gray-200 hover:bg-gray-300" href="#" id="logout">
+		<a class="flex items-center justify-center w-full h-16 mt-auto hover:bg-gray-300" href="#" id="logout">
 			<svg class="w-6 h-6 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
 			</svg>
@@ -311,45 +311,45 @@ $(document).ready(function() {
 				<div class="grid grid-rows-4 grid-rows-custom">
     
 				<div class="flex items-center space-x-4 pl-8 pr-6 w-full">
-						<img src="./public/avatar.jpg" alt="Profile Picture" class="w-12 h-12 rounded-full">
+						<img src="./public/user.png" alt="Profile Picture" class="w-12 h-12 rounded-full">
 						<div class="w-full">
 							<div class="w-full justify-between flex">
-								<p class="font-bold">ahahahha</p>
-								<p class="font-bold">Follow</p>
+								<p class="font-bold">Yodhimas G</p>
+								<p class="font-bold text-indigo-500">Follow</p>
 							</div>
-							<p class="text-gray-800">ahahah</p>
+							<p class="text-gray-800">@ydms</p>
 						</div>
 					</div>
 					<div class="flex items-center space-x-4 pl-8 pr-6 w-full">
-						<img src="./public/avatar.jpg" alt="Profile Picture" class="w-12 h-12 rounded-full">
+						<img src="./public/user.png" alt="Profile Picture" class="w-12 h-12 rounded-full">
 						<div class="w-full">
 							<div class="w-full justify-between flex">
-								<p class="font-bold">ahahahha</p>
-								<p class="font-bold">Follow</p>
+								<p class="font-bold">Rizky Aziz</p>
+								<p class="font-bold text-indigo-500">Follow</p>
 							</div>
-							<p class="text-gray-800">ahahah</p>
-						</div>
-					</div>
-
-					<div class="flex items-center space-x-4 pl-8 pr-6 w-full">
-						<img src="./public/avatar.jpg" alt="Profile Picture" class="w-12 h-12 rounded-full">
-						<div class="w-full">
-							<div class="w-full justify-between flex">
-								<p class="font-bold">ahahahha</p>
-								<p class="font-bold">Follow</p>
-							</div>
-							<p class="text-gray-800">ahahah</p>
+							<p class="text-gray-800">@Aziz123</p>
 						</div>
 					</div>
 
 					<div class="flex items-center space-x-4 pl-8 pr-6 w-full">
-						<img src="./public/avatar.jpg" alt="Profile Picture" class="w-12 h-12 rounded-full">
+						<img src="./public/user.png" alt="Profile Picture" class="w-12 h-12 rounded-full">
 						<div class="w-full">
 							<div class="w-full justify-between flex">
-								<p class="font-bold">ahahahha</p>
-								<p class="font-bold">Follow</p>
+								<p class="font-bold">Bima Bayu S</p>
+								<p class="font-bold text-indigo-500">Follow</p>
 							</div>
-							<p class="text-gray-800">ahahah</p>
+							<p class="text-gray-800">@semenrinda</p>
+						</div>
+					</div>
+
+					<div class="flex items-center space-x-4 pl-8 pr-6 w-full">
+						<img src="./public/user.png" alt="Profile Picture" class="w-12 h-12 rounded-full">
+						<div class="w-full">
+							<div class="w-full justify-between flex">
+								<p class="font-bold">Hanif Syauqi</p>
+								<p class="font-bold text-indigo-500">Follow</p>
+							</div>
+							<p class="text-gray-800">@hanipp</p>
 						</div>
 					</div>
 
@@ -368,38 +368,38 @@ $(document).ready(function() {
 						
 						<div class="w-full">
 							<div class="w-full justify-between flex">
-								<p class="font-bold">ahahahha</p>
+								<p class="font-bold">Raja Ampat</p>
 							
 							</div>
-							<p class="text-gray-800">ahahah</p>
+							<p class="text-gray-800">1200 posts</p>
 						</div>
 					</div>
 					<div class="flex items-center space-x-4 pl-8 pr-6 w-full">
 						<div class="w-full">
 							<div class="w-full justify-between flex">
-								<p class="font-bold">ahahahha</p>
+								<p class="font-bold">Labuan Bajo</p>
 							</div>
-							<p class="text-gray-800">ahahah</p>
-						</div>
-					</div>
-
-					<div class="flex items-center space-x-4 pl-8 pr-6 w-full">
-						<div class="w-full">
-							<div class="w-full justify-between flex">
-								<p class="font-bold">ahahahha</p>
-								
-							</div>
-							<p class="text-gray-800">ahahah</p>
+							<p class="text-gray-800">1000 posts</p>
 						</div>
 					</div>
 
 					<div class="flex items-center space-x-4 pl-8 pr-6 w-full">
 						<div class="w-full">
 							<div class="w-full justify-between flex">
-								<p class="font-bold">ahahahha</p>
+								<p class="font-bold">Bali</p>
 								
 							</div>
-							<p class="text-gray-800">ahahah</p>
+							<p class="text-gray-800">800 posts</p>
+						</div>
+					</div>
+
+					<div class="flex items-center space-x-4 pl-8 pr-6 w-full">
+						<div class="w-full">
+							<div class="w-full justify-between flex">
+								<p class="font-bold">Banda Neira</p>
+								
+							</div>
+							<p class="text-gray-800">500 posts</p>
 						</div>
 					</div>
 

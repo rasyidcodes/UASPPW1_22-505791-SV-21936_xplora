@@ -1,6 +1,5 @@
 <?php
             
-            
             session_start();
 
             $user_id = '';
@@ -12,7 +11,7 @@
                 // ...
             } else {
                 // Redirect to the signup route
-                header('Location: /xplora/signup');
+                header('Location: /xplora/home');
                 exit(); // Terminate the current script to prevent further execution
             }
 
@@ -35,7 +34,7 @@
                   echo '<div class="p-4 m-8 bg-white" style="border-radius: 10px;">';
                   echo '<div class="flex items-center justify-between">';
                   echo '<div class="flex items-center space-x-4">';
-                  echo '<img src="./public/avatar.jpg" alt="Profile Picture" class="w-12 h-12 rounded-full">';
+                  echo '<img src="./public/user.png" alt="Profile Picture" class="w-12 h-12 rounded-full">';
                   echo '<div>';
                   echo '<p>' . $row['screenName'] . '</p>';
                   echo '<p>' . $row['username'] . '</p>';

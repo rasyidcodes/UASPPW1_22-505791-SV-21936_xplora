@@ -12,7 +12,7 @@ session_start();
                 // ...
             } else {
                 // Redirect to the signup route
-                header('Location: /xplora/signup');
+                header('Location: /xplora/home');
                 exit(); // Terminate the current script to prevent further execution
             }
 
@@ -80,6 +80,9 @@ if ($result->num_rows > 0) {
         <link href="https://cdn.tailwindcss.com/2.2.16/tailwind.min.css" rel="stylesheet">
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css'>
         <script src="https://cdn.tailwindcss.com"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
         <link href="{{ mix('src/css/app.css') }}" rel="stylesheet">
         <style>
             .custom-input {
@@ -100,6 +103,7 @@ if ($result->num_rows > 0) {
   }
 
   function updateStatus(postId, status) {
+    
     var modal = document.getElementById("statusModal");
     var inputstatus = document.getElementById("newStatusInput");
     var updateButton = document.getElementById("updateButton");
@@ -231,8 +235,8 @@ if ($result->num_rows > 0) {
 
     <div class="w-full h-full overflow-y-scroll" style="background-color: #EFEEF1; border-radius: 10px;">
         <div class=" bg-white" style="border-radius:10px;">
-            <div class="flex items-center justify-center p-8 bg-gray-200">
-                <img class="w-32 h-32 object-cover rounded-full" src="<?php echo $profileImage; ?>" alt="Profile Photo">
+            <div class="flex items-center justify-center p-8 bg-indigo-500 " >
+                <img class="w-32 h-32 object-cover rounded-full" src="./public/user.png" alt="Profile Photo">
             </div>
             <div class="px-6 py-4">
                 <div class="font-bold text-xl mb-2"><?php echo $username; ?></div>

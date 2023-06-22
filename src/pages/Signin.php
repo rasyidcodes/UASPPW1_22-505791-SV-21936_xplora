@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       if ($result) {
        
         echo '<script>
-                  window.location.href = "/xplora/i";  
+                  window.location.href = "/xplora/";  
               </script>';
         // Redirect to a new page or perform further actions
       } else {

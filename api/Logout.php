@@ -8,6 +8,6 @@ $_SESSION = [];
 session_destroy();
 
 // Redirect the user to the login page or any other desired location
-header('Location: /xplora/signin');
+header('Location: /xplora/home');
 exit();
 ?>

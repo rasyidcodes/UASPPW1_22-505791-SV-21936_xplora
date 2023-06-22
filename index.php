@@ -118,18 +118,16 @@ $route = new Route();
 $route->add("/user/{id}","pages/user.php");
 $route->add("/signin","src/pages/Signin.php");
 $route->add("/signup","src/pages/Signup.php");
-$route->add("/i","src/pages/index.php");
-$route->add("/test","pages/test.php");
-$route->add("/auth","src/pages/auth.php");
+$route->add("/","src/pages/index.php");
+$route->add("/home","src/pages/home.php");
 $route->add("/home","src/pages/home.php");
 $route->add("/coba","src/pages/coba.php");
 $route->add("/tes","api/getProfile.php");
-$route->add("/username/auth","pages/username.php");
 
 
 // //example route with multiple params
 // $route->add("/download/{downID}/{filename}","download.php");
 
-// $route->notFound("pages/404.php");
+$route->notFound("src/pages/404.php");
 
 ?>
