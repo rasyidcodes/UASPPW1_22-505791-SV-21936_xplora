@@ -4,4 +4,4 @@ Rasyid Kusnady
 # About Xplora
 - Xplora adalah sebuah platform media sosial bagi traveller untuk berbagi informasi mengenai travelling.
 
-## About Xplora
+#### About Xplora
