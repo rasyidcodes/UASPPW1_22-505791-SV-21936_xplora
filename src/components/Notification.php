@@ -1,18 +1,7 @@
 <?php
-// MySQL database credentials
-$host = 'localhost';
-$db = 'xplora';
-$user = 'root';
-$password = '';
 
-// Establish a MySQL connection
-$mysqli = new mysqli($host, $user, $password, $db);
-
-// Check for connection errors
-if ($mysqli->connect_errno) {
-    echo 'Failed to connect to MySQL: ' . $mysqli->connect_error;
-    exit();
-}
+require('../../api/connection.php');
+$mysqli = $conn;
 
 // Query to retrieve the notification data
 $query = "SELECT n.notificationFrom, n.notificationFor, n.type, n.time,

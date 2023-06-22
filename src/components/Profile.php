@@ -17,14 +17,6 @@ session_start();
             }
 
 
-// Database connection parameters
-// $servername = "localhost";
-// $username = "root";
-// $password = "";
-// $dbname = "xplora";
-
-// // Create a new MySQLi object
-// $conn = new mysqli($servername, $username, $password, $dbname);
 
 require '../../api/connection.php';
 

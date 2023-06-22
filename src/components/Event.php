@@ -1,17 +1,7 @@
 <?php
 // PHP code
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "xplora";
-
+require('../../api/connection.php');
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 // Retrieve data from the database
 $sql = "SELECT * FROM trips";
