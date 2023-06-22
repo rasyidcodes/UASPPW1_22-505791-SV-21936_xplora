@@ -44,10 +44,16 @@ Xplora mencoba mengatasi beberapa permasalahan yang sering dihadapi oleh para pe
 - Tata letak yang mudah dipahami user, menggunakan sidebar.
 - Tipografi jelas.
 
-``` def greet(name):
-    print("Hello, " + name + "!")
+```
 
-greet("John")
+<div class="w-full">
+    <div class="w-full justify-between flex">
+        #Menggunakan tipografi bold untuk menyatakan mana yang lebih utama dari 2 baris tulisan.
+        <p class="font-bold">#LabuanBajo</p>
+    </div>
+    <p class="text-gray-800">1000 posts</p>
+</div>
+
  ```
 ## Website responsive
 
