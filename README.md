@@ -47,7 +47,7 @@ Xplora mencoba mengatasi beberapa permasalahan yang sering dihadapi oleh para pe
   '''<div class="w-full justify-between flex">
 								<p class="font-bold">#LabuanBajo</p>
 							</div>
-							<p class="text-gray-800">1000 posts</p>'''
+							<p class="text-gray-800">1000 posts</p> </div>'''
 
 ## Website responsive
 
