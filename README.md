@@ -4,6 +4,16 @@ Rasyid Kusnady
 # About Xplora
 - Xplora adalah sebuah platform media sosial bagi traveller untuk berbagi informasi mengenai travelling.
 
+Xplora mencoba mengatasi beberapa permasalahan yang sering dihadapi oleh para pelancong, antara lain:
+
+1. Informasi terbatas: Xplora berusaha menyediakan aksesibilitas informasi yang lebih luas tentang destinasi wisata, objek wisata, dan aktivitas di berbagai tempat. Hal ini membantu para pelancong mendapatkan informasi yang akurat dan terbaru, termasuk ulasan dan rekomendasi dari pengguna lain.
+
+2. Kesulitan merencanakan perjalanan: Xplora menyediakan fitur event yang memungkinkan pengguna untuk menemukan dan bergabung dalam perjalanan dan acara-acara menarik. Dengan adanya fitur ini, pelancong dapat mencari dan bergabung dengan kelompok perjalanan yang sesuai dengan minat mereka, sehingga memudahkan mereka dalam merencanakan perjalanan.
+
+3. Kurangnya interaksi dan koneksi dengan pelancong lain: Melalui fitur pesan dan komunitas yang ada di Xplora, para pelancong dapat berinteraksi dengan sesama pelancong. Hal ini membantu menciptakan kesempatan untuk bertukar pengalaman, tips perjalanan, dan informasi berguna lainnya. Pengguna juga dapat menemukan teman perjalanan baru dan memperluas jaringan sosial mereka.
+
+4. Tantangan bahasa dan budaya: Xplora dapat membantu mengatasi tantangan bahasa dan budaya dengan menyediakan fungsi penerjemah dan memfasilitasi pertukaran budaya di antara pengguna. Hal ini memungkinkan pelancong untuk berkomunikasi dengan lebih mudah dan memahami budaya setempat dengan lebih baik.
+
 # Fitur Xplora
 - Home : Pengguna dapat melihat postingan dari pengguna lain di halaman beranda, menjelajahi momen-momen berharga, menemukan inspirasi, dan terhubung dengan pengguna lain di seluruh dunia.
 
@@ -15,12 +25,4 @@ Rasyid Kusnady
 
 - Profile : Fitur profil memungkinkan pengguna untuk melihat informasi akun mereka, seperti foto profil, bio, dan minat pribadi. Pengguna juga dapat mengedit dan memperbarui postingan mereka, sehingga tetap terhubung dengan komunitas yang lebih luas.
 
-Xplora mencoba mengatasi beberapa permasalahan yang sering dihadapi oleh para pelancong, antara lain:
 
-Informasi terbatas: Xplora berusaha menyediakan aksesibilitas informasi yang lebih luas tentang destinasi wisata, objek wisata, dan aktivitas di berbagai tempat. Hal ini membantu para pelancong mendapatkan informasi yang akurat dan terbaru, termasuk ulasan dan rekomendasi dari pengguna lain.
-
-Kesulitan merencanakan perjalanan: Xplora menyediakan fitur event yang memungkinkan pengguna untuk menemukan dan bergabung dalam perjalanan dan acara-acara menarik. Dengan adanya fitur ini, pelancong dapat mencari dan bergabung dengan kelompok perjalanan yang sesuai dengan minat mereka, sehingga memudahkan mereka dalam merencanakan perjalanan.
-
-Kurangnya interaksi dan koneksi dengan pelancong lain: Melalui fitur pesan dan komunitas yang ada di Xplora, para pelancong dapat berinteraksi dengan sesama pelancong. Hal ini membantu menciptakan kesempatan untuk bertukar pengalaman, tips perjalanan, dan informasi berguna lainnya. Pengguna juga dapat menemukan teman perjalanan baru dan memperluas jaringan sosial mereka.
-
-Tantangan bahasa dan budaya: Xplora dapat membantu mengatasi tantangan bahasa dan budaya dengan menyediakan fungsi penerjemah dan memfasilitasi pertukaran budaya di antara pengguna. Hal ini memungkinkan pelancong untuk berkomunikasi dengan lebih mudah dan memahami budaya setempat dengan lebih baik.
