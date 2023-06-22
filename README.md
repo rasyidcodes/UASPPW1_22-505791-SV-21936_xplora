@@ -32,7 +32,7 @@ Xplora mencoba mengatasi beberapa permasalahan yang sering dihadapi oleh para pe
 - JQUERY untuk memanipulasi elemen HTML (AJAX)
 
 ### RUN :
-- Import terlebih dahulu file sql yaitu xplora.sql
+- Import terlebih dahulu file sql yaitu xplora.sql dengan nama database xplora.
 - Kemudian setup directory XAMPP menggunakan nama 'XPLORA' -> jadi http://localhost/xplora/
 - RUN
 
